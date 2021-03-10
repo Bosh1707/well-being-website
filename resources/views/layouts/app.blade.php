@@ -63,7 +63,7 @@
                                 <a class="nav-link" href="bmi">BMI calculator</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="todo">Todo List</a>
+                                <a class="nav-link" href="todo">To do List</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="chart">BMI chart</a>
