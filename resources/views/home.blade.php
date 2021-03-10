@@ -26,7 +26,7 @@
             <div class="card" style="width: 18rem;">
                 <div class="card-body">
                     <h5 class="card-title">To do</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <p class="card-text">Create your own to do list!</p>
                     <a href="{{url('/todo')}}" class="btn btn-primary">Check My Todos</a>
                 </div>
             </div>
@@ -35,7 +35,7 @@
             <div class="card" style="width: 18rem;">
                 <div class="card-body">
                     <h5 class="card-title">Body Mass Index</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <p class="card-text">Calculate your BMI and track your progress</p>
                     <a href="{{url('/bmi')}}" class="btn btn-primary">My BMI Progress</a>
                 </div>
             </div>
@@ -44,7 +44,7 @@
             <div class="card" style="width: 18rem;">
                 <div class="card-body">
                     <h5 class="card-title">Food Menus</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <p class="card-text">Search up recipes and save them for later</p>
                     <a href="{{url('/foodmenu')}}" class="btn btn-primary">Search Food Menus</a>
                 </div>
             </div>
