@@ -1,3 +1,6 @@
 .forms-inline{
     display: inline;
 }
+.badge-light{
+    background-color: orange;
+}

@@ -35,6 +35,10 @@
     <input type="number" readonly class="form-control" id="bmi-value" name="bmi"  placeholder="">
 </div>
 <div class="form-group">
+    <label for="bmi">Your BMI Class: </label>
+    <label id="bmi-class" class="badge"></label>
+</div>
+<div class="form-group">
 <button class="btn btn-primary" id="btn-cal">Calculate</button>
 <button class="btn btn-default" id="btn-clear" >Clear</button>
 </div>
@@ -49,6 +53,7 @@
 
 </div>
 
+@endsection
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script>
 $(function(){
@@ -58,13 +63,37 @@ $(function(){
         e.preventDefault()
         var height = $('#height').val();
         var weight = $('#weight').val();
+        var bmiClass;
+        var color;
 
         var val = weight / (height * height)
         var bmi = val.toFixed(2);
         if(!isNaN(bmi)){
             $('#btn-save').show();
         }
-        $('#bmi-value').val(bmi)
+        $('#bmi-value').val(bmi);
+        
+        
+        if(bmi < 18.5){
+            bmiClass = 'Under weight';
+            color = 'badge badge-primary';
+        }else if(bmi < 24.9){
+            bmiClass = 'Normal';
+            color = 'badge badge-success';
+        }else if(bmi < 29.9){
+            bmiClass = 'Overweight';
+            color = 'badge badge-warning';
+        }else if(bmi < 34.9){
+            bmiClass = 'OBESE';
+            color = 'badge badge-light';
+        }else if(bmi > 35){
+            bmiClass = 'extremly OBESE';
+            color = 'badge badge-danger';
+        }
+        $('#bmi-class').removeClass();
+        $('#bmi-class').addClass(color);
+        
+        $('#bmi-class').text(bmiClass);
 
     });
     $('#btn-clear').on('click',function(e){
@@ -84,5 +113,4 @@ $(function(){
     //     document.getElementById("frm-bmi").submit();
     // });
 });
-</script>
-@endsection
+</script> 
